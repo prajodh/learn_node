@@ -12,4 +12,10 @@ console.log(_.flattenDeep(item))
 
 // npm install dependenxcy as dev use -D
 
+// added the start to package json to run the code 
+
 // npm run for dev on nodemon
+
+//npm install -g will install it globally
+
+//package-lock.json version of dependies and dependencies of dependencies
