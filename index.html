@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    
+    async function add(){
+    const x = parseInt(document.getElementById("quantity1").value)
+    const y = parseInt(document.getElementById("quantity2").value)
+    const response = await fetch("https://arithimetic-service-ppsunder.onrender.com/add/"+x+"/"+y)
+    const sum = await response.json()
+    // console.log(response)
+    document.getElementById("ans").innerHTML = sum}
+
+    async function sub(){
+    const x = parseInt(document.getElementById("quantity1").value)
+    const y = parseInt(document.getElementById("quantity2").value)
+    const response = await fetch("https://arithimetic-service-ppsunder.onrender.com/sub/"+x+"/"+y)
+    const sub = await response.json()
+    // console.log(response)
+    document.getElementById("ans").innerHTML = sub}
+
+    async function mul(){
+    const x = parseInt(document.getElementById("quantity1").value)
+    const y = parseInt(document.getElementById("quantity2").value)
+    const response = await fetch("https://arithimetic-service-ppsunder.onrender.com/mul/"+x+"/"+y)
+    const multiply = await response.json()
+    // console.log(response)
+    document.getElementById("ans").innerHTML = multiply}
+
+    async function div(){
+    const x = parseInt(document.getElementById("quantity1").value)
+    const y = parseInt(document.getElementById("quantity2").value)
+    const response = await fetch("https://arithimetic-service-ppsunder.onrender.com/div/"+x+"/"+y)
+    const divide = await response.json()
+    // console.log(response)
+    document.getElementById("ans").innerHTML = divide}
+</script>
+
+<body>
+    <label for="quantity"> Arithimetic </label> <br> <br>
+    <input type="number" id="quantity1" name="quantity" >
+    <!-- <label for="quantity"> + </label> -->
+    <input type="number" id="quantity2" name="quantity" >
+    <button type="button" onclick="add()"> + </button>
+    <button type="button" onclick="sub()"> - </button>
+    <button type="button" onclick="mul()"> * </button>
+    <button type="button" onclick="div()"> / </button>
+    <p id="ans"></p>
+</body>
+</html>
