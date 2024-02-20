@@ -1,7 +1,6 @@
 {
   "name": "learn-node",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "dev": "nodemon app.js",
@@ -11,9 +10,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "lodash": "^4.17.21"
+    "express": "^4.18.2",
+    "lodash": "^4.17.21",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.3"
-  }
+  },
+  "description": ""
 }
